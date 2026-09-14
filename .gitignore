@@ -1,0 +1,13 @@
+# MATLAB
+*.asv
+*.m~
+slprj/
+octave-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 리포트 출력물(실행 중 생성)
+report_*.pdf
