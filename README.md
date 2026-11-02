@@ -10,8 +10,7 @@
   <img alt="Model" src="https://img.shields.io/badge/Model-ResNet--18%20%2B%20RBF%20SVM-success">
 </p>
 
-2026-1 서울대학교 건축학과 «건축전산(Computing in Architectural Engineering)» 팀 프로젝트
-· 김원재 · 남하준 · 이용제
+
 
 ---
 
