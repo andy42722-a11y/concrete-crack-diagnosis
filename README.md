@@ -10,7 +10,7 @@
   <img alt="Model" src="https://img.shields.io/badge/Model-ResNet--18%20%2B%20RBF%20SVM-success">
 </p>
 
-
+서울대학교 건축전산 수업의 3인 팀 프로젝트로 함께 만들었습니다.
 
 ---
 
