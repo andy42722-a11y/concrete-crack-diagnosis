@@ -1,12 +1,12 @@
-function crack_diagnosis_app3
+function crack_diagnosis_app
 % =====================================================================
-%  콘크리트 균열 진단 앱 (v3)
-%   · 분류기: 본인 전처리(흑백+미디언+샤프닝)+ResNet-18 특징+RBF SVM (최고 성능)
-%   · 선형 검출: 본인 전처리 기반 + 선형 성분 추출
-%   · 상태등급: 국토안전관리원 A~E 기준(보내준 표) + 사선(전단)균열 예외
-%   · 스케일: 이미지에서 두 점을 '먼저' 선으로 찍고 -> '그 다음' 길이(mm) 입력
+%  콘크리트 균열 진단 앱
+%   · 분류기: 전처리(흑백+미디언+샤프닝) + ResNet-18 특징 + RBF SVM
+%   · 선형 균열 검출: bottom-hat + Otsu 이진화 + 형상 필터
+%   · 상태등급: 국토안전관리원 상태평가기준 A~E + 사선(전단)균열 예외
+%   · 스케일: 이미지에서 두 점을 선으로 찍은 뒤 실제 길이(mm) 입력
 %
-%  실행:  >> crack_diagnosis_app3
+%  실행:  >> crack_diagnosis_app
 %  필요: Image Processing Toolbox (+분류기 사용 시 Deep Learning/ResNet-18)
 % =====================================================================
     REG = buildRegulations();
@@ -21,7 +21,7 @@ function crack_diagnosis_app3
     end
 
     % ================= GUI =================
-    fig = uifigure('Name','콘크리트 균열 진단 앱 (v3)','Position',[70 70 1150 720]);
+    fig = uifigure('Name','콘크리트 균열 진단 앱','Position',[70 70 1150 720]);
     outer = uigridlayout(fig,[1 2]); outer.ColumnWidth = {380,'1x'}; outer.Padding=[10 10 10 10];
 
     left = uipanel(outer,'Title','설정 및 실행');
