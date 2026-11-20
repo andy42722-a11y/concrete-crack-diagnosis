@@ -105,7 +105,7 @@ score = bacc + 1e-3*f1;          % 균형정확도 우선, F1 타이브레이크
 score(isnan(score)) = -Inf;
 [~, bestIdx] = max(score);
 bestName = names(bestIdx);
-fprintf('★ 선택된 최고 분류기: %s (균형정확도 %.3f, F1 %.3f)\n', ...
+fprintf('선택된 최고 분류기: %s (균형정확도 %.3f, F1 %.3f)\n', ...
         bestName, bacc(bestIdx), f1(bestIdx));
 
 % 혼동행렬 시각화(가능한 경우)
@@ -143,7 +143,7 @@ function [acc, bacc, f1] = binMetrics(ytrue, ypred, posClass)
 end
 
 
-%% C추가함수
+%% 전처리 (앱의 preprocessCrackImage와 같은 함수)
 function outImg = preprocessCrackImage(inImg)
 % 1. 색상 노이즈 무시: 이미지를 흑백으로 변환하여 순수한 '형태'와 '명암'만 남김
 if size(inImg, 3) == 3
